@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architecture-Site</title>
+    <!-- link for google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link for font awesome  -->
+
+    <script
+      src="https://kit.fontawesome.com/bf898e1087.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link for daisyUi tailwind -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- link for tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            FontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+            },
+            colors: {
+              bgColor: "rgba(171, 239, 95, 1)",
+              NavBg: "rgba(28 25 23 .7)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-manrope bg-gray-100">
+    <!-- header section -->
+    <header class="w-full bg-white">
+      <div class="">
+        <nav class="navbar flex justify-end bg-[rgba(24,24,24,.7)]">
+          <div class="gap-2">
+            <div class="flex gap-2">
+              <i
+                class="fa-brands fa-facebook-f px-3 py-2 text-gray-600 bg-amber-400 rounded-full"
+              ></i>
+              <i
+                class="fa-brands fa-instagram px-2 font-bold py-2 text-gray-600 bg-amber-400 rounded-full"
+              ></i>
+            </div>
+            <div class="dropdown dropdown-end">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost btn-circle avatar"
+              >
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-amber-400 text-gray-600 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+            <div class="form-control">
+              <input
+                type="text"
+                placeholder="Search"
+                class="input bg-amber-400 rounded-none placeholder:text-gray-600 placeholder:font-bold placeholder:uppercase w-24 md:w-auto"
+              />
+            </div>
+          </div>
+        </nav>
+        <div class="flex flex-col items-center justify-center">
+          <img class="w-fit" src="assets/banner.png" alt="" />
+          <h1 class="mt-4 mb-4 text-4xl font-bold text-gray-700">
+            A barn house of this design has a striking appearance
+          </h1>
+        </div>
+        <div class="w-full overflow-hidden">
+          <div class="navbar bg-base-100 sticky-navbar z-10 top-0">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                >
+                  <li><a href="#">Home</a></li>
+                  <li>
+                    <a href="#">Services</a>
+                  </li>
+                  <li><a href="#">Blogs</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl font-bold text-gray-100"
+                ><span
+                  class="-rotate-45 inline-block text-amber-400 rounded-full"
+                  ><i class="fa-solid fa-arrow-right"></i></span
+                >Rinterio</a
+              >
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li>
+                  <a
+                    href="#"
+                    class="px-7 border-[1px] border-t-0 border-b-0 border-r-0 border-gray-600 rounded-none"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-7 border-[1px] border-r-0 border-t-0 border-b-0 border-gray-600 rounded-none"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-7 border-[1px] border-r-0 border-t-0 border-b-0 border-gray-600 rounded-none"
+                    >Blogs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-7 border-[1px] border-t-0 border-b-0 border-gray-600 rounded-none"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-end gap-2">
+              <a href="#" class="text-amber-400"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+              <a href="#" class="text-amber-400"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <a
+                class="px-5 py-3 rounded-full text-gray-800 font-semibold bg-amber-400"
+                >Book Consult
+                <span class="-rotate-45 inline-block"
+                  ><i class="fa-solid fa-arrow-right"></i></span
+              ></a>
+            </div>
+          </div>
+          <div
+            class="carousel carousel-center w-full p-4 space-x-4 bg-transparent"
+            id="autoCarousel"
+          >
+            <div class="carousel-item">
+              <img
+                src="assets/house.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house(2).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house (3).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house (4).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house (5).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house 6.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house7.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house8.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house9.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house10.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house(2).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house (3).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house (4).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house (5).jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house 6.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house7.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house8.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house9.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/house10.jpeg"
+                class="rounded-box w-64 h-40 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- main section -->
+    <main class="container mx-auto px-4 mt-32">
+      <!-- services section -->
+      <section class="relative grid lg:grid-cols-2 grid-cols-1 gap-8 mb-16">
+        <div
+          class="w-full px-4 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+        >
+          <div class="absolute -top-16">
+            <img src="assets/Vector.png" alt="" />
+          </div>
+          <a
+            href="#"
+            class="px-7 py-3 bg-green-200 rounded-full text-gray-900 font-bold"
+            ><span class="mr-4"><i class="fa-solid fa-arrow-right"></i></span
+            >About Us</a
+          >
+          <h1 class="text-4xl font-bold text-black w-3/4 mt-8">
+            We design thoughtful, liveable spaces
+          </h1>
+          <p class="text-base text-gray-400 font-semibold mt-8 w-3/4">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents.
+          </p>
+          <div class="flex bg-gray-50 w-full py-4 px-4 rounded-lg mt-4 gap-4">
+            <div class="">
+              <img src="assets/commercial.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-bold text-gray-600 mb-2">Commercial</h2>
+              <p class="text-base font-semibold text-gray-400 w-2/3 mb-2">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+            </div>
+          </div>
+          <div class="flex bg-gray-50 w-full py-4 px-4 rounded-lg mt-4 gap-4">
+            <div class="">
+              <img src="assets/residential.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-bold text-gray-600 mb-2">Commercial</h2>
+              <p class="text-base font-semibold text-gray-400 w-2/3 mb-2">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+        >
+          <img class="w-fit" src="assets/Rectangle.png" alt="" />
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const carousel = document.getElementById("autoCarousel");
+    const items = carousel.querySelectorAll(".carousel-item");
+    let index = 0;
+
+    function autoSlide() {
+      index = (index + 1) % items.length; // শেষ হলে আবার শুরুতে যাবে
+      carousel.scrollTo({
+        left: items[index].offsetLeft,
+        behavior: "smooth",
+      });
+    }
+
+    setInterval(autoSlide, 2500); // প্রতি 2.5 সেকেন্ডে slide
+    //
+
+    // sticky navbar
+    const header = document.querySelector("header");
+    const navbar = document.querySelector(".sticky-navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > header.offsetHeight - 50) {
+        navbar.classList.add("fixed", "top-0", "shadow");
+      } else {
+        navbar.classList.remove("fixed", "top-0", "shadow");
+      }
+    });
+    // section animation
+    const sections = document.querySelectorAll(".section-to-animate");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Element viewport এ এলে animate করো
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+            entry.target.classList.add("opacity-100", "translate-y-0");
+          } else {
+            // Element viewport থেকে বের হলে আবার hide করে দাও
+            entry.target.classList.add("opacity-0", "translate-y-10");
+            entry.target.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      { threshold: 0.1 } // 10% দেখা দিলে trigger হবে
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</html>
