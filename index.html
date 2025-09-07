@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
     <!-- link for font awesome  -->
@@ -32,18 +32,49 @@
         theme: {
           extend: {
             FontFamily: {
-              manrope: ["Manrope", "sans-serif"],
+              Oswald: ["Oswald", " sans-serif"],
             },
             colors: {
               bgColor: "rgba(171, 239, 95, 1)",
-              NavBg: "rgba(28 25 23 .7)",
+              NavBg: "rgba(28, 25, 23, 0.7)",
+            },
+            backgroundImage: {
+              hrBg: "linear-gradient(to right, #333 0%, #333 25%, #aaa 25%, #aaa 50%, #00bfff 50%, #00bfff 75%, #ff4500 75%, #ff4500 100%)",
             },
           },
         },
       };
     </script>
+    <style>
+      /* Custom slider line */
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 4px;
+        background: ;
+        cursor: pointer;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 2rem;
+        height: 16px;
+        border-radius: 5px;
+        background: rgb(3, 167, 3);
+        cursor: pointer;
+      }
+      /* input[type="range"]::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: rgb(57, 22, 184);
+        cursor: pointer;
+      } */
+    </style>
   </head>
-  <body class="font-manrope bg-gray-100">
+  <body
+    class="font-[Oswald,sans-serif] bg-gray-100 selection:bg-amber-400 selection:text-gray-900"
+  >
     <!-- header section -->
     <header class="w-full bg-white">
       <div class="">
@@ -314,9 +345,11 @@
       </div>
     </header>
     <!-- main section -->
-    <main class="container mx-auto px-4 mt-32">
+    <main class="mt-32">
       <!-- services section -->
-      <section class="relative grid lg:grid-cols-2 grid-cols-1 gap-8 mb-16">
+      <section
+        class="container mx-auto px-4 relative grid lg:grid-cols-2 grid-cols-1 gap-8 mb-16"
+      >
         <div
           class="w-full px-4 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
         >
@@ -367,55 +400,604 @@
           <img class="w-fit" src="assets/Rectangle.png" alt="" />
         </div>
       </section>
+      <!-- information section -->
+      <section class="container mx-auto px-6 mb-0 mt-32 pt-4 w-full">
+        <div class="w-full flex flex-col items-center justify-center">
+          <h1
+            class="lg:text-5xl text-3xl font-bold tracking-wide text-end text-gray-800 w-3/4 mb-8"
+          >
+            Find Architecture to
+            <span class="text-amber-400 tracking-normal">Make an Impact</span>
+            <hr
+              class="lg:w-2/5 w-3/5 float-end mt-2 bg-hrBg h-[4px] rounded-full"
+            />
+          </h1>
+          <p class="text-base font-bold text-center text-gray-400 w-3/4">
+            Have you ever wondered how you can make an impact? Ever imagined how
+            to create sustainable communities, how to make urban spaces more
+            personal, or how to use design thinking to improve how people work,
+            live, and explore? Study Architecture. Architects shape the future
+            of the built environment, from buildings to neighborhoods to cities
+            to regions. Explore StudyArchitecture.com to find a wealth of
+            resources, including where to learn, what to know, and the latest
+            news in the global architecture community.
+          </p>
+        </div>
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 capitalize mt-32 bg-amber-400"
+        >
+          <div
+            class="w-full flex justify-center sm:mb-8 py-16 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <div class="w-4/5">
+              <h1 class="mt-8 text-3xl tracking-normal text-gray-50 mb-12">
+                find architecture tha's right for you
+              </h1>
+              <a
+                href="#"
+                class="text-2xl font-semibold text-white bg-green-300 px-10 py-6 mt-8"
+                >take this question</a
+              >
+            </div>
+          </div>
+          <div
+            class="relative w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700 mt-4"
+          >
+            <img
+              class="lg:absolute z-10 bottom-0"
+              src="assets/sa-homepage_laptop-removebg-preview.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="w-full bg-zinc-700 mt-0 relative py-16">
+        <a
+          href="#"
+          class="px-3 py-3 text-3xl text-white absolute -top-8 shadow-lg lg:left-1/2 left-1/4 bg-amber-400 rounded-full"
+          ><i>0R</i></a
+        >
+        <div class="px-16 max-auto">
+          <div class="grid lg:grid-cols-2 grid-cols-1">
+            <div
+              class="section-to-animate flex flex-col justify-end opacity-0 translate-y-10 transition-all duration-700 w-full px-8 text-start"
+            >
+              <h1 class="text-4xl font-bold text-amber-400 mb-8">
+                Search for a Architects
+              </h1>
+              <p class="text-base font-bold text-gray-100">
+                Already know what you’re looking for in an architecture school?
+                Search by location, degree type, or school name.
+              </p>
+            </div>
+            <div
+              class="px-8 w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+            >
+              <form class="grid grid-cols-3 mt-4 gap-4">
+                <!-- Location -->
+                <select
+                  class="rounded-none py-2 px-4 w-full bg-gray-50 text-gray-700"
+                >
+                  <option>Location</option>
+                  <option>Dhaka</option>
+                  <option>Chittagong</option>
+                  <option>Rajshahi</option>
+                </select>
+
+                <!-- Degree Types -->
+                <select class="rounded-none w-full bg-gray-50 text-gray-700">
+                  <option>Degree Types</option>
+                  <option>Bachelor</option>
+                  <option>Masters</option>
+                  <option>PhD</option>
+                </select>
+
+                <!-- School Search -->
+                <input
+                  type="text"
+                  placeholder="Search by School Name"
+                  class="rounded-none py-2 w-full bg-gray-50 text-gray-700"
+                />
+
+                <!-- Submit -->
+                <button
+                  type="submit"
+                  class="bg-amber-400 hover:bg-yellow-500 text-black font-bold px-6 py-2 rounded w-full"
+                >
+                  SUBMIT
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- portfolio section -->
+      <section class="px-16 mt-32">
+        <div class="w-full text-center">
+          <a
+            href="#"
+            class="px-4 py-3 mb-8 rounded-full bg-green-200 text-gray-600 font-semibold text-xl"
+            ><span><i class="fa-solid fa-arrow-right"></i></span> Explore our
+            Latest works</a
+          >
+          <div
+            class="w-full flex flex-col text-center items-center justify-center"
+          >
+            <h1 class="mt-8 text-5xl font-semibold text-gray-700">
+              Our Latest Portfolio
+            </h1>
+            <p class="mt-8 text-xl text-gray-400 mb-8 w-2/3">
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="grid lg:grid-cols-5 grid-cols-1 gap-4 mb-4">
+            <div
+              class="col-span-3 w-full p-6 border rounded-xl section-to-animate opacity-0 translate-y-10 transition-all duration-700 hover:shadow-2xl"
+            >
+              <div class="lg:flex gap-4">
+                <div class="w-full overflow-hidden rounded-lg">
+                  <img
+                    class="w-full transform transition duration-1000 hover:scale-110 object-cover"
+                    src="assets/img1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full mt-4">
+                  <h2 class="text-xl text-gray-600 mb-4 font-bold">
+                    Commercial
+                  </h2>
+                  <p class="text-sm w-full text-gray-400 mb-4">
+                    The barn house captivates with its blend of rustic charm and
+                    modern. The barn house captivates with its blend of rustic
+                    charm and modern .
+                  </p>
+                  <a href="#" class="text-xl text-gray-500 font-bold"
+                    >View Details<span
+                      class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                      ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 border col-span-2 flex justify-center rounded-xl w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700 hover:shadow-2xl"
+            >
+              <div class="w-full overflow-hidden rounded-lg">
+                <img
+                  class="w-full transform transition duration-1000 hover:scale-110 object-cover"
+                  src="assets/img2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+            <div
+              class="p-6 border col-span-1 flex justify-center rounded-xl w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700 hover:shadow-2xl"
+            >
+              <div class="w-full overflow-hidden rounded-lg">
+                <img
+                  class="w-full transform transition duration-1000 hover:scale-110 object-cover"
+                  src="assets/img3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="gap-4 p-6 border col-span-2 flex justify-center rounded-xl w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700 hover:shadow-2xl"
+            >
+              <div class="lg:flex gap-4">
+                <div class="w-full overflow-hidden rounded-lg">
+                  <img
+                    class="w-full transform transition duration-1000 hover:scale-110 object-cover"
+                    src="assets/img4.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full mt-4">
+                  <h2 class="text-xl text-gray-600 mb-4 font-bold">
+                    Commercial
+                  </h2>
+                  <p class="text-sm w-full text-gray-400 mb-4">
+                    The barn house captivates with its blend of rustic charm and
+                    modern.
+                  </p>
+                  <a href="#" class="text-xl text-gray-500 font-bold"
+                    >View Details<span
+                      class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                      ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 border col-span-1 flex justify-center rounded-xl w-full section-to-animate opacity-0 translate-y-10 transition-all duration-700 hover:shadow-2xl"
+            >
+              <div class="w-full overflow-hidden rounded-lg">
+                <img
+                  class="w-full transform transition duration-1000 hover:scale-110 object-cover"
+                  src="assets/img5.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- stat section -->
+      <section class="w-full px-16 mt-32">
+        <div class="">
+          <div class="stats shadow w-full py-8 bg-green-200">
+            <div
+              class="stat flex flex-col text-center section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+            >
+              <div class="stat-figure text-amber-400 text-5xl mb-4">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="stat-value text-gray-600">235+</div>
+              <div class="stat-title text-gray-600">Happy Client Review</div>
+            </div>
+
+            <div
+              class="stat flex flex-col text-center section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+            >
+              <div class="stat-figure text-amber-400 text-5xl mb-4">
+                <i class="fa-regular fa-building"></i>
+              </div>
+              <div class="stat-value text-gray-600">50+</div>
+              <div class="stat-title text-gray-600">Work Departments</div>
+            </div>
+
+            <div
+              class="stat flex flex-col text-center section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+            >
+              <div class="stat-figure text-amber-400 text-5xl mb-4">
+                <i class="fa-solid fa-users"></i>
+              </div>
+
+              <div class="stat-value text-gray-600 uppercase">30k+</div>
+              <div class="stat-title text-gray-600">Our Happy Client</div>
+            </div>
+            <div
+              class="stat flex flex-col text-center section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+            >
+              <div class="stat-figure text-amber-400 text-5xl mb-4">
+                <i class="fa-regular fa-building"></i>
+              </div>
+
+              <div class="stat-value text-gray-600 uppercase">307k+</div>
+              <div class="stat-title text-gray-600">Staff Members</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- slider section -->
+      <section class="mt-32 px-10">
+        <div class="w-full py-8 flex flex-col items-center justify-center">
+          <!-- Logo Wrapper -->
+          <div id="logoWrapper" class="overflow-hidden">
+            <div
+              id="logoTrack"
+              class="flex cursor-pointer transition-all duration-500 ease-in-out"
+            >
+              <img
+                src="assets/logo21.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo20.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+
+              <img
+                src="assets/logo19.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo18.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+
+              <img
+                src="assets/logo17.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+
+              <img
+                src="assets/logo15.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo14.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo13.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo12.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo11.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+
+              <img
+                src="assets/logo6.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo5.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo4.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo3.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo2.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+              <img
+                src="assets/logo.png"
+                class="w-full hover:scale-110 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+              />
+            </div>
+          </div>
+
+          <!-- Slider + Buttons -->
+          <div class="flex items-center w-1/3 cursor-pointer gap-4 mt-6 px-10">
+            <!-- Slider -->
+            <input
+              type="range"
+              id="logoSlider"
+              min="0"
+              max="100"
+              value="0"
+              class="flex-1 bg-amber-400 section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- news section -->
+      <section class="w-full px-16 mt-32 py-8 bg-green-50">
+        <div class="w-full text-center">
+          <a
+            href="#"
+            class="px-4 py-3 mb-8 rounded-full bg-amber-400 text-gray-600 font-semibold text-xl"
+            ><span><i class="fa-solid fa-arrow-right"></i></span> Rinterio
+            News</a
+          >
+          <div
+            class="w-full flex flex-col text-center items-center justify-center"
+          >
+            <h1 class="mt-8 text-5xl font-semibold text-gray-700">
+              Read Our Articles and News
+            </h1>
+            <p class="mt-8 text-base text-gray-400 mb-8 w-2/4">
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-4 sm:grid-cols-1">
+          <div
+            class="card image-full w-full shadow-sm section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <figure>
+              <img class="w-full" src="assets/article1.png" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl text-gray-300">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-sm text-gray-400">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a href="#" class="text-xl text-gray-100 font-bold"
+                >Read More<span class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                  ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+              ></a>
+            </div>
+          </div>
+          <div
+            class="card image-full w-full shadow-sm section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <figure>
+              <img class="w-full" src="assets/article2.png" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl text-gray-300">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-sm text-gray-400">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a href="#" class="text-xl text-gray-100 font-bold"
+                >Read More<span class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                  ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+              ></a>
+            </div>
+          </div>
+          <div
+            class="card image-full w-full shadow-sm section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <figure>
+              <img class="w-full" src="assets/article3.png" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl text-gray-300">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-sm text-gray-400">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a href="#" class="text-xl text-gray-100 font-bold"
+                >Read More<span class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                  ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+              ></a>
+            </div>
+          </div>
+          <div
+            class="card image-full w-full shadow-sm section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <figure>
+              <img class="w-full" src="assets/img2.png" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl text-gray-300">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-sm text-gray-400">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a href="#" class="text-xl text-gray-100 font-bold"
+                >Read More<span class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                  ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+              ></a>
+            </div>
+          </div>
+          <div
+            class="card image-full w-full shadow-sm section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <figure>
+              <img class="w-full" src="assets/img3.png" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl text-gray-300">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-sm text-gray-400">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a href="#" class="text-xl text-gray-100 font-bold"
+                >Read More<span class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                  ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+              ></a>
+            </div>
+          </div>
+          <div
+            class="card image-full w-full shadow-sm section-to-animate opacity-0 translate-y-10 transition-all duration-700"
+          >
+            <figure>
+              <img class="w-fit" src="assets/img4.png" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-xl text-gray-300">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-sm text-gray-400">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a href="#" class="text-xl text-gray-100 font-bold"
+                >Read More<span class="ml-2 bg-amber-400 px-3 py-2 rounded-full"
+                  ><i class="fa-solid fa-arrow-right -rotate-45"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- form section -->
+      <section
+        class="w-full px-16 py-8 bg-[url('./assets/bg.jpg')] bg-cover bg-center bg-no-repeat"
+      >
+        <div class="w-full py-8">
+          <div class="w-full text-center mt-32">
+            <a
+              href="#"
+              class="px-4 py-3 mb-8 rounded-full bg-amber-400 text-gray-600 font-semibold text-xl"
+              ><span><i class="fa-solid fa-arrow-right"></i></span>Let’s
+              Connect</a
+            >
+            <div
+              class="w-full flex flex-col text-center items-center justify-center"
+            >
+              <h1 class="mt-8 text-5xl font-semibold text-gray-700">
+                Let’s Discuss Next Project
+              </h1>
+              <p class="mt-8 text-base text-gray-400 mb-8 w-2/4">
+                The barn house captivates with its blend of rustic charm and
+                modern sophistication, featuring weathered wood, sleek metal
+                accents.
+              </p>
+            </div>
+          </div>
+          <div class="w-full flex justify-center">
+            <!-- Form -->
+            <form
+              class="grid grid-cols-1 md:grid-cols-2 gap-6 p-8 rounded-2xl shadow-lg w-3/4"
+            >
+              <!-- Left column -->
+              <div class="space-y-6">
+                <input
+                  type="text"
+                  placeholder="First Name*"
+                  class="input bg-gray-50 input-bordered w-full rounded-xl"
+                />
+                <input
+                  type="text"
+                  placeholder="Phone Number*"
+                  class="input bg-gray-50 input-bordered w-full rounded-xl"
+                />
+              </div>
+
+              <!-- Right column -->
+              <div class="space-y-6">
+                <input
+                  type="text"
+                  placeholder="Last Name*"
+                  class="input bg-gray-50 input-bordered w-full rounded-xl"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Number*"
+                  class="input bg-gray-50 input-bordered w-full rounded-xl"
+                />
+              </div>
+
+              <!-- Full width message box -->
+              <div class="md:col-span-2">
+                <textarea
+                  placeholder="Write your message here"
+                  rows="5"
+                  class="textarea bg-gray-50 textarea-bordered w-full rounded-xl resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="md:col-span-2">
+                <button
+                  type="submit"
+                  class="py-4 w-full bg-amber-400 text-gray-900 hover:bg-transparent border-none rounded-xl font-semibold"
+                >
+                  Send Mail
+                  <span class="ml-2 bg-gray-800 text-green-400 px-3 py-2 rounded-full"
+                    ><i class="fa-solid fa-arrow-right -rotate-45"></i
+                  ></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
-  <script>
-    const carousel = document.getElementById("autoCarousel");
-    const items = carousel.querySelectorAll(".carousel-item");
-    let index = 0;
-
-    function autoSlide() {
-      index = (index + 1) % items.length; // শেষ হলে আবার শুরুতে যাবে
-      carousel.scrollTo({
-        left: items[index].offsetLeft,
-        behavior: "smooth",
-      });
-    }
-
-    setInterval(autoSlide, 2500); // প্রতি 2.5 সেকেন্ডে slide
-    //
-
-    // sticky navbar
-    const header = document.querySelector("header");
-    const navbar = document.querySelector(".sticky-navbar");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > header.offsetHeight - 50) {
-        navbar.classList.add("fixed", "top-0", "shadow");
-      } else {
-        navbar.classList.remove("fixed", "top-0", "shadow");
-      }
-    });
-    // section animation
-    const sections = document.querySelectorAll(".section-to-animate");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Element viewport এ এলে animate করো
-            entry.target.classList.remove("opacity-0", "translate-y-10");
-            entry.target.classList.add("opacity-100", "translate-y-0");
-          } else {
-            // Element viewport থেকে বের হলে আবার hide করে দাও
-            entry.target.classList.add("opacity-0", "translate-y-10");
-            entry.target.classList.remove("opacity-100", "translate-y-0");
-          }
-        });
-      },
-      { threshold: 0.1 } // 10% দেখা দিলে trigger হবে
-    );
-
-    sections.forEach((section) => observer.observe(section));
-  </script>
+  <script src="main.js"></script>
 </html>

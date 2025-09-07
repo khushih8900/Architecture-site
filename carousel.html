@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* Custom slider line */
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      background: red;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 2rem;
+      height: 16px;
+      border-radius: 5px;
+      background: black;
+      cursor: pointer;
+    }
+    /* input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: black;
+      cursor: pointer;
+    } */
+  </style>
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-6xl mx-auto py-10">
+    <!-- Logo Wrapper -->
+    <div id="logoWrapper" class="overflow-hidden">
+      <div id="logoTrack" class="flex gap-16 transition-all duration-500 ease-in-out">
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" class="h-16 hover:scale-110 transition" />
+        <img src="https://via.placeholder.com/150x80?text=Logo+7" class="h-16 hover:scale-110 transition" />
+      </div>
+    </div>
+
+    <!-- Slider + Buttons -->
+    <div class="flex items-center w-2/4 gap-4 mt-6 px-10">
+      
+
+      <!-- Slider -->
+      <input type="range" id="logoSlider" min="0" max="100" value="0" class="flex-1" />
+
+  
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById("logoSlider");
+    const wrapper = document.getElementById("logoWrapper");
+ 
+
+    function syncSlider() {
+      const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+      const percent = (wrapper.scrollLeft / maxScroll) * 100;
+      slider.value = percent;
+    }
+
+    // Slider drag → move logos
+    slider.addEventListener("input", function () {
+      const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+      const scrollPos = (this.value / 100) * maxScroll;
+      wrapper.scrollLeft = scrollPos;
+    });
+
+   
+  </script>
+</body>
+</html>
