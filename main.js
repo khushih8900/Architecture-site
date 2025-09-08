@@ -3,15 +3,15 @@ const items = carousel.querySelectorAll(".carousel-item");
 let index = 0;
 
 function autoSlide() {
-  index = (index + 1) % items.length; // শেষ হলে আবার শুরুতে যাবে
+  index = (index + 1) % items.length; 
   carousel.scrollTo({
     left: items[index].offsetLeft,
     behavior: "smooth",
   });
-}
+};
 
-setInterval(autoSlide, 2500); // প্রতি 2.5 সেকেন্ডে slide
-//
+setInterval(autoSlide, 2500); 
+
 
 // sticky navbar
 const header = document.querySelector("header");
@@ -31,17 +31,17 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Element viewport এ এলে animate করো
+        // Element viewport  animate 
         entry.target.classList.remove("opacity-0", "translate-y-10");
         entry.target.classList.add("opacity-100", "translate-y-0");
       } else {
-        // Element viewport থেকে বের হলে আবার hide করে দাও
+        // Element viewport hide
         entry.target.classList.add("opacity-0", "translate-y-10");
         entry.target.classList.remove("opacity-100", "translate-y-0");
       }
     });
   },
-  { threshold: 0.1 } // 10% দেখা দিলে trigger হবে
+  { threshold: 0.1 } 
 );
 sections.forEach((section) => observer.observe(section));
 
